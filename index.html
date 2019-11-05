@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/acciones.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <title>Revisión técnicos en terreno</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <a target="_blank" href="https://forms.zohopublic.com/virtualoffice12892/form/OrderForm1/formperma/BaPBUCvpkadAsPI0uh1WTq1bpS5wSWzYra69IKk6pms">Orden de Instalación</a>
+                <a target="_blank" href="https://forms.zohopublic.com/virtualoffice12892/form/OrdendeSoporte/formperma/dvHAoHck2qvyQ8lww42gPBGtdn5T_xvx0896QCrQbrw">Orden de Soporte</a>
+                <a href="Check List de técnico">Checklist de técnico</a>
+                <a href=""></a>
+                <a href=""></a>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+
+        
+        <form action="" id="tecnico">
+            <h2>Información de técnico</h2>
+            <label for="tecnico">Técnico</label>
+            <input type="text" name="Nombre" id="nombretecnico" placeholder="Nombre de Técnico">
+            <input type="text" name="Apellido" id="apellidotecnico" placeholder="Apellido de Técnico">
+            <input type="date" name="fechasoporte" id="fechasoporte"><br><br>
+        </form>
+        
+
+            <form action="" id="cliente">
+                <label for="">Cliente</label><br>
+                <!--Esta es la lista de clientes y debe filtrar para elegir la ciudad y el totem-->
+                <input list="clientes" name="cliente">
+                <datalist id="clientes">
+                  <option value="Caja los andes">
+                  <option value="Etc">
+                </datalist><br>
+
+                <!--Esta es la lista de clientes y debe filtrar para elegir la ciudad y el totem-->
+                <label for="">Ciudad</label><br>
+                <input list="" name="cliente">
+                <datalist id="clientes">
+                  <option value="Antofagasta">
+                  <option value="Etc">
+                </datalist><br>
+
+                <!--Esta es la lista de clientes y debe filtrar para elegir la ciudad y el totem-->
+                <label for="">Centro de mando</label><br>
+                <input list="" name="cliente">
+                <datalist id="clientes">
+                  <option value="Antofagasta">
+                  <option value="Etc">
+                </datalist><br>
+
+                <!--Agregar y modificar con arreglos (arrays)-->
+                    <div id="totemdatosred">
+                        <label for="">Dirección</label>
+                        <input type="text" name="dirección" id="" placeholder="Dirección de sucursal"> <br>
+                        <label for="totemip">IP</label>
+                        <input type="text" name="iptotem" id="" placeholder="IP de totem"><br>
+                        <label for="totemgateway">Gateway</label>
+                        <input type="text" name="gatewaytotem" id="" placeholder="Gateway de totem"><br>
+                        <label for="totemnetmask">Netmask</label>
+                        <input type="text" name="" id="" placeholder="Netmask de totem"><br>
+                        <label for="totemdns1">DNS-1</label>
+                        <input type="text" name="" id="" placeholder="DNS 1 de totem"><br>
+                        <label for="totemdns2">DNS-2</label>
+                        <input type="text" name="" id="" placeholder="DNS 2 de totem"><br>
+                    </div>
+                <input type="button" value="Modificar">
+                <input type="submit" value="Guardar">
+        </form>
+        
+
+            <h2>¿Que problema presenta la sucursal?</h2>
+            <p>se desplegaran las pruebas a realizar para cada componente</p>
+
+            <form id="selector">
+                    <input type="checkbox" name="totem1" value="totem">Totem<br>
+                    <input type="checkbox" name="tvbox1" value="totem">Tv Box<br>
+                    <!--Preguntar la cantidad y que modelos tv  box  tiene la sucursal-->
+                    <input type="checkbox" name="modulos1" value="modulo">Módulos<br>
+            </form>
+
+        <div id="contenedor">
+            
+            <form id="totem1">
+                <h2>Pruebas Realizadas al Totem</h2>
+                <p>¿La configuración del equipo está bien ejecutada según los siguientes parámetros?</p>
+
+                <input type="checkbox" name="item1" value="yml">Se revisó archivo yml<br>
+                <input type="checkbox" name="item2" value="env">Se revisó archivo .env<br>
+                <input type="checkbox" name="item4" value="red">Se validó Dirección IP<br>
+                <input type="checkbox" name="item5" value="proxy">Se validarón proxys<br>
+                <input type="checkbox" name="item6" value=""> I have a bike<br>
+            </form>
+
+                        
+            <form id="tvbox1">
+                <h2>Pruebas Realizadas al Tv Box</h2>
+                <p>¿La configuración del equipo está bien ejecutada según los siguientes parámetros?</p>
+
+                <input type="checkbox" name="item1" value="ip">Se revisó el direccionamiento IP<br>
+                <input type="checkbox" name="item2" value="hellocordova">Se revisó aplicación ZeroQ<br>
+                <input type="checkbox" name="item4" value="autostart">Se revisó aplicacion AutoStart<br>
+                <input type="checkbox" name="item5" value="Car"> I have a car<br>
+                <input type="checkbox" name="item6" value="Bike"> I have a bike<br>
+            </form>
+            
+            <form id="modulos1">
+                <h2>Pruebas Realizadas en Módulos</h2>
+                <p>¿La configuración del equipo está bien ejecutada según los siguientes parámetros?</p>
+
+                <input type="checkbox" name="item1" value="Bike"> Borrado de logs<br>
+                <input type="checkbox" name="item2" value="Car"> I have a car<br>
+                <input type="checkbox" name="item4" value="Bike"> I have a bike<br>
+                <input type="checkbox" name="item5" value="Car"> I have a car<br>
+                <input type="checkbox" name="item6" value="Bike"> I have a bike<br>
+            </form>
+
+            <input type="submit" value="Enviar">
+
+
+        </div>
+            
+    </article>
+
+    
+</body>
+</html>
